@@ -1,13 +1,17 @@
 package com.bank.account.kata.model;
 
 import com.bank.account.kata.repository.OperationRepository;
+import com.bank.account.kata.utils.OperationPrinter;
 
 public class Account {
 
     private final OperationRepository operationRepository;
+    private final OperationPrinter operationPrinter;
 
-    public Account(OperationRepository operationRepository) {
+    public Account(OperationRepository operationRepository,
+                   OperationPrinter operationPrinter) {
         this.operationRepository = operationRepository;
+        this.operationPrinter = operationPrinter;
     }
 
     public void deposit(int amount) {
@@ -19,6 +23,6 @@ public class Account {
     }
 
     public void printStatement() {
-        throw new UnsupportedOperationException();
+        operationPrinter.print(operationRepository.allOperations());
     }
 }
