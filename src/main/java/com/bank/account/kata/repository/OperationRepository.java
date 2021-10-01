@@ -9,7 +9,7 @@ import java.util.List;
 public class OperationRepository {
 
     private final Clock clock;
-    private List<Operation> operations = new ArrayList<>();
+    private final List<Operation> operations = new ArrayList<>();
     public OperationRepository(Clock clock) {
         this.clock = clock;
     }

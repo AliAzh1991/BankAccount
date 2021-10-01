@@ -1,7 +1,9 @@
 package com.bank.account.kata.model;
 
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 
+@Getter
 @EqualsAndHashCode
 public class Operation {
 
