@@ -47,7 +47,7 @@ public class AccountOperations {
 
     @Test
     public void should_print_operation() {
-        List<Operation> operations = Arrays.asList(new Operation());
+        List<Operation> operations = Arrays.asList(new Operation("10/09/2021", 100));
         BDDMockito.given(operationRepository.allOperations()).willReturn(operations);
 
         account.printStatement();

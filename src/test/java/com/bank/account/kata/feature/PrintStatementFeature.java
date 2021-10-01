@@ -3,6 +3,7 @@ package com.bank.account.kata.feature;
 import com.bank.account.kata.model.Account;
 import com.bank.account.kata.model.Console;
 import com.bank.account.kata.repository.OperationRepository;
+import com.bank.account.kata.utils.Clock;
 import com.bank.account.kata.utils.OperationPrinter;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,11 +19,14 @@ public class PrintStatementFeature {
     @Mock
     private Console console;
 
+    @Mock
+    private Clock clock;
+
     private Account account;
 
     @Before
     public void initialise() {
-        OperationRepository operationRepository = new OperationRepository();
+        OperationRepository operationRepository = new OperationRepository(clock);
         OperationPrinter operationPrinter = new OperationPrinter();
         account = new Account(operationRepository, operationPrinter);
     }
