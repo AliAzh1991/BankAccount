@@ -7,21 +7,22 @@ Think of your personal bank account experience When in doubt, go for the simples
 - Statement printing
 
 # User Stories
-###User Story 1
+### User Story 1 :
+
 In order to save money
 
 As a bank client
 
 I want to make a deposit in my account
 
-###User Story 2
+### User Story 2 :
 In order to retrieve some or all of my savings
 
 As a bank client
 
 I want to make a withdrawal from my account
 
-###User Story 3
+### User Story 3 :
 In order to check my operations
 
 As a bank client
