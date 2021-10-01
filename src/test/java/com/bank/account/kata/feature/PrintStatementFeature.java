@@ -2,6 +2,7 @@ package com.bank.account.kata.feature;
 
 import com.bank.account.kata.model.Account;
 import com.bank.account.kata.model.Console;
+import com.bank.account.kata.repository.OperationRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,7 +21,8 @@ public class PrintStatementFeature {
 
     @Before
     public void initialise() {
-        account = new Account();
+        OperationRepository operationRepository = new OperationRepository();
+        account = new Account(operationRepository);
     }
 
     @Test

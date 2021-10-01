@@ -1,13 +1,21 @@
 package com.bank.account.kata.model;
 
+import com.bank.account.kata.repository.OperationRepository;
+
 public class Account {
 
+    private final OperationRepository operationRepository;
+
+    public Account(OperationRepository operationRepository) {
+        this.operationRepository = operationRepository;
+    }
+
     public void deposit(int amount) {
-        throw new UnsupportedOperationException();
+        operationRepository.addDeposit(amount);
     }
 
     public void withdraw(int amount) {
-        throw new UnsupportedOperationException();
+        operationRepository.addWithdraw(amount);
     }
 
     public void printStatement() {
